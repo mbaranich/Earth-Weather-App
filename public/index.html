@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<style href="styles.css" rel="stylesheet"></style>
+		<script
+			defer
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDREKq3IRhkXbo3aZgA2mzDrnXuju6FVWU&libraries=places&callback=initMap"
+		></script>
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<div class="icon-container">
+					<canvas id="icon" wiidth="100" height="100"></canvas>
+				</div>
+			</div>
+			<div class="content">
+				<div class="general-information">
+					<div class="status">Enter A Location</div>
+					<div class="location">To Find The Weather</div>
+				</div>
+				<div class="detail-section">
+					<div class="detail">
+						<div class="title">Wind</div>
+						<div class="value">TBD</div>
+					</div>
+					<div class="detail">
+						<div class="title">Temperature</div>
+						<div class="value">TBD</div>
+					</div>
+					<div class="detail">
+						<div class="title">Precipitation</div>
+						<div class="value">TBD</div>
+					</div>
+				</div>
+				<div class="city-search-container">
+					<input type="text" class="city-search" placeholder="Enter Location" />
+				</div>
+			</div>
+		</div>
+		<a href="https://weatherstack.net/poweredby" class="weatherstack-logo"
+			>Powered by WeatherStack</a
+		>
+	</body>
+</html>
