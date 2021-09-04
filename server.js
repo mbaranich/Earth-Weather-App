@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 app.post("/weather", (req, res) => {
-	const url = `http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_KEY}&query=${req.body.latitude},${req.body.longitude}`;
+	const url = `http://api.weatherstack.com/current?access_key=${WEATHERSTACK_API_KEY}&query=${req.body.latitude},${req.body.longitude}&units=f`;
 	axios({
 		url: url,
 		responseType: "json",

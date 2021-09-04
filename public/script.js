@@ -37,7 +37,7 @@ function setWeatherData(data, place) {
 	statusElement.textContent = data.weather_descriptions;
 	temperatureElement.textContent = data.temperature;
 	precipiationElement.textContent = `${data.precip * 100}%`;
-	windElement.textContent = data.wind_speed;
-	icon.set("icon", data.weather_descriptions);
-	icon.play();
+	windElement.textContent = `${data.wind_speed}mph`;
+	// icon.set("icon", data.weather_descriptions);
+	// icon.play();
 }
