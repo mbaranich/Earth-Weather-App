@@ -18,6 +18,21 @@ searchBox.addListener("places_changed", () => {
 	})
 		.then((res) => res.json())
 		.then((data) => {
+			// console.log(data);
 			setWeatherData(data, place.formatted_address);
 		});
 });
+
+const locationElement = document.querySelector("[data-location]");
+const statusElement = document.querySelector("[data-status]");
+const temperatureElement = document.querySelector("[data-temperature]");
+const precipiationElement = document.querySelector("[data-precipiation]");
+const windElement = document.querySelector("[data-wind]");
+
+function setWeatherData(data, place) {
+	locationElement.textContent = place;
+	statusElement.textContent = data.weather_descriptions;
+	temperatureElement.textContent = data.temperature;
+	precipiationElement.textContent = `${data.precip * 100}%`;
+	windElement.textContent = data.wind_speed;
+}
