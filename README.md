@@ -7,4 +7,4 @@ Develop application using multiple API's
 -Weatherstack for current weather.
 
 # Highlights
--Uses backend to hide Weatherstack API key.
+-Uses backend to hide Weatherstack API key. Calls API's using client and server.
